@@ -2,11 +2,12 @@
   <h1 class="chat-title">Chat {{ sender }}</h1>
   <div class="chat-input-container">
     <input type="text"
+           pInputText
            class="chat-input"
            [(ngModel)]="content"
            placeholder="Type your message here..."
            (keydown.enter)="send()"/>
-    <button (click)="send()">Send</button>
+    <p-button (onClick)="send()">Send</p-button>
   </div>
   <br>
   @for (chatMessage of chatMessages; track $index) {

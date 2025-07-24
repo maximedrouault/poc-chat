@@ -4,12 +4,16 @@ import {ChatService} from "../../services/chat.service";
 import {ChatMessage} from "../../interfaces/chat-message.interface";
 import {FormsModule} from "@angular/forms";
 import {UpperCasePipe} from "@angular/common";
+import {InputText} from 'primeng/inputtext';
+import {Button} from 'primeng/button';
 
 @Component({
   selector: 'app-chat',
   imports: [
     FormsModule,
-    UpperCasePipe
+    UpperCasePipe,
+    InputText,
+    Button
   ],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss'
