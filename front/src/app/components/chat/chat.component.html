@@ -1,1 +1,17 @@
-<p>Chat {{ sender }} component works!</p>
+<div class="chat-container">
+  <h1 class="chat-title">Chat {{ sender }}</h1>
+  <div class="chat-input-container">
+    <input type="text"
+           class="chat-input"
+           [(ngModel)]="content"
+           placeholder="Type your message here..."
+           (keydown.enter)="send()"/>
+    <button (click)="send()">Send</button>
+  </div>
+  <br>
+  @for (chatMessage of chatMessages; track $index) {
+    <p class="chat-message">
+      <strong>{{ chatMessage.sender | uppercase }} : </strong> {{ chatMessage.content }}
+    </p>
+  }
+</div>

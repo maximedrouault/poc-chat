@@ -1,0 +1,21 @@
+.chat-container {
+  width: 40%;
+  margin: auto;
+
+  .chat-title {
+    text-align: center;
+  }
+
+  .chat-input-container {
+    display: flex;
+
+    .chat-input {
+      flex: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .chat-message {
+    overflow-wrap: break-word;
+  }
+}
